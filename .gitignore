@@ -1,0 +1,10 @@
+__pycache__/
+creds.py
+*.txt.gz
+.DS_Store
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+**/*.ipynb_checkpoints/
+meta.dat
+*.txt
+*.html
