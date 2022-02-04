@@ -8,3 +8,5 @@ creds.py
 *.dat
 *.txt
 *.html
+*.h5
+*.pkl
