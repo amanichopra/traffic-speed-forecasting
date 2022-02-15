@@ -8,3 +8,4 @@ creds.py
 *.dat
 *.txt
 *.html
+!requirements.txt
