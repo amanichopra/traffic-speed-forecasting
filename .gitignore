@@ -5,7 +5,10 @@ creds.py
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 **/*.ipynb_checkpoints/
-*.dat
 *.txt
-*.html
 !requirements.txt
+adj_mat_ind_station_mapper.dat
+adj_mat.dat
+speeds.dat
+meta.dat
+
