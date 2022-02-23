@@ -11,4 +11,5 @@ adj_mat_ind_station_mapper.dat
 adj_mat.dat
 speeds.dat
 meta.dat
-
+/data/processed/fwy-405-n/*
+!.gitkeep
