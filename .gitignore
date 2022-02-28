@@ -7,9 +7,9 @@ creds.py
 **/*.ipynb_checkpoints/
 *.txt
 !requirements.txt
-adj_mat_ind_station_mapper.dat
-adj_mat.dat
-speeds.dat
+adj_mat_ind_station_mapper.*
+adj_mat.*
+speeds.*
 meta.dat
 /data/processed/fwy-405-n/*
 !.gitkeep
