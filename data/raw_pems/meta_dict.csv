@@ -1,0 +1,15 @@
+Name, Comment
+ID, An integer value that uniquely indenties the Station Metadata. Use this value to 'join' other clearinghouse files that contain Station Metadata.
+Freeway, Freeway Number.
+Freeway Direction, A string indicating the freeway direction.
+County Identifier, The unique number that identifies the county that contains this census station within PeMS.
+City, City. 
+State Postmile, State Postmile. 
+Absolute Postmile, Absolute Postmile. 
+Latitude, Latitude.
+Longitude, Longitude.
+Length, Length
+Type, Type. 
+Lanes, Total number of lanes. 
+Name, Name. 
+User IDs[1-4], User-entered string identifier.
