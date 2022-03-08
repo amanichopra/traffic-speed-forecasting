@@ -18,7 +18,7 @@ There are 4 models currently in place.
 3. **ARIMA**
 4. **LSTM**
 
-These models can be loaded by running the notebooks in ```./models``` or by importing from [here](https://drive.google.com/file/d/1mPIR1Go70gm2cFoRMYuMzc6dXw-hnXA5/view?usp=sharing) (unzip the folder and replace ```./models/trained``` with it). 
+These models can be loaded by running the notebooks in ```./models``` or by importing from [here](https://drive.google.com/file/d/15-vTYyd25EK34caTtY4ZSabbvkzGqgdi/view?usp=sharing) (unzip the folder and replace ```./models/trained``` with it). 
 
 ## Evaluation
 Run ```evaluation.ipynb``` to measure and compare the models and view the plots in ```./plots``` to visualize forecast results.
