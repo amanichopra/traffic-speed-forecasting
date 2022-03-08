@@ -13,10 +13,10 @@
 ## Modeling
 There are 4 models currently in place.
 
-**1. Baseline:** Our naive model forecasts using mean value based on time of day.
-**2. Prophet:** Facebook's additive regression model with four main components — a piecewise linear logistic growth curve trend; a yearly seasonal component modelled using Fourier series; a weekly seasonal component created using dummy variables; and a user-provided list of important holidays.
-**3. ARIMA**
-**4. LSTM**
+1. **Baseline:** Our naive model forecasts using mean value based on time of day.
+2. **Prophet:** Facebook's additive regression model with four main components — a piecewise linear logistic growth curve trend; a yearly seasonal component modelled using Fourier series; a weekly seasonal component created using dummy variables; and a user-provided list of important holidays.
+3. **ARIMA**
+4. **LSTM**
 
 These models can be loaded by running the notebooks in ```./models``` or by importing from [here](https://drive.google.com/file/d/1mPIR1Go70gm2cFoRMYuMzc6dXw-hnXA5/view?usp=sharing) (unzip the folder and replace ```./models/trained``` with it). 
 
