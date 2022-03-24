@@ -15,4 +15,9 @@ meta.dat
 trained/*
 **/trained/*
 */trained/
+**/ARIMA/*
+**/CNN/*
+**/baseline/*
+**/prophet/*
+**/LSTM/*
 !.gitkeep
