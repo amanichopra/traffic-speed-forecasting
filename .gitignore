@@ -12,5 +12,5 @@ adj_mat.*
 speeds.*
 meta.dat
 /data/processed/fwy-405-n/*
-!.gitkeep
 models/trained/*
+!.gitkeep
