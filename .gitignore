@@ -20,4 +20,5 @@ trained/*
 **/baseline/*
 **/prophet/*
 **/LSTM/*
+/models/STGCN_IJCAI-18/*
 !.gitkeep
