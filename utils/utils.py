@@ -5,6 +5,7 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from time import time
 import numpy as np
 from prophet import Prophet
+from tensorflow.keras import Sequential
 
 # loads preprocessed data
 def load_processed_data(path_to_data, method='pickle'):
@@ -34,7 +35,7 @@ def cv(model, data, folds=5, metrics=['mse', 'mae', 'rmse', 'r2'], epochs=2, ver
     if type(data) == list:
         X = data[0]
         y = data[1]
-        splits = [np.array_split(data[0], folds), np.array_split(data[1], folds)] # splits X, splits y
+        splits = [np.array_split(X, folds), np.array_split(y, folds)] # splits X, splits y
     else:
         splits = np.array_split(data, folds)
         
@@ -44,7 +45,7 @@ def cv(model, data, folds=5, metrics=['mse', 'mae', 'rmse', 'r2'], epochs=2, ver
         else:
             mod = deepcopy(model)
         
-        if type(splits) == list:
+        if type(data) == list: # indicates X, y are provided as data
             splits_X = splits[0]
             splits_y = splits[1]
             train = [np.concatenate(splits_X[:(fold+1)]), np.concatenate(splits_y[:(fold+1)])] # X, y
@@ -65,14 +66,13 @@ def cv(model, data, folds=5, metrics=['mse', 'mae', 'rmse', 'r2'], epochs=2, ver
             start = time()
             mod.fit(train[0], train[1], epochs=epochs, verbose=verbose)
             end = time()
-            preds = mod.predict(valid[0])
-            valid = valid[1]
+            preds = mod.predict(valid[0]).flatten()
+            valid = valid[1].flatten()
         else:
             start = time()
             mod.fit(train)
             end = time()
             preds = mod.predict(valid)
-        
         cv_metrics[(fold+1)]['train_time'] = (end - start)
         for metric in metrics:
             if metric == 'mse':
