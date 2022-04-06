@@ -11,14 +11,17 @@
 2. Run EDA.ipynb to get an overview of the data.
 
 ## Modeling
-There are 4 models currently in place.
+There are 6 models currently in place.
 
 1. **Baseline:** Our naive model forecasts using mean value based on time of day.
 2. **Prophet:** Facebook's additive regression model with four main components — a piecewise linear logistic growth curve trend; a yearly seasonal component modelled using Fourier series; a weekly seasonal component created using dummy variables; and a user-provided list of important holidays.
 3. **ARIMA**
-4. **LSTM**
+4. **CNN**
+5. **LSTM**
+6. **STGCN:** Spatio-temporal graph convolutional neural network designed by researchers at Peking University. 
 
-These models can be loaded by running the notebooks in ```./models``` or by importing from [here](https://drive.google.com/file/d/15-vTYyd25EK34caTtY4ZSabbvkzGqgdi/view?usp=sharing) (unzip the folder and replace ```./models/trained``` with it). 
+
+These models can be loaded by running the notebooks in ```./models``` or by importing from [here](https://drive.google.com/file/d/1ye_WqatNnyJbFY1BqkogVy1GSNhUE3-V/view?usp=sharing) (unzip the folder and replace ```./models/trained``` with it). 
 
 ## Evaluation
 Run ```evaluation.ipynb``` to measure and compare the models and view the plots in ```./plots``` to visualize forecast results.
