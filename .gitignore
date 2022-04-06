@@ -20,5 +20,6 @@ trained/*
 **/baseline/*
 **/prophet/*
 **/LSTM/*
-/models/STGCN_IJCAI-18/*
+/models/STGCN/*
+/plots/STGCN_tensorboard/*
 !.gitkeep
