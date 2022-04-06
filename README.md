@@ -11,7 +11,7 @@
 2. Run EDA.ipynb to get an overview of the data.
 
 ## Modeling
-There are 4 models currently in place.
+There are 6 models currently in place.
 
 1. **Baseline:** Our naive model forecasts using mean value based on time of day.
 2. **Prophet:** Facebook's additive regression model with four main components — a piecewise linear logistic growth curve trend; a yearly seasonal component modelled using Fourier series; a weekly seasonal component created using dummy variables; and a user-provided list of important holidays.
