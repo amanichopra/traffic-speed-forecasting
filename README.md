@@ -21,7 +21,32 @@ There are 6 models currently in place.
 6. **STGCN:** Spatio-temporal graph convolutional neural network designed by researchers at Peking University. 
 
 
-These models can be loaded by running the notebooks in ```./models``` or by importing from [here](https://drive.google.com/file/d/1ye_WqatNnyJbFY1BqkogVy1GSNhUE3-V/view?usp=sharing) (unzip the folder and replace ```./models/trained``` with it). 
+These models can be loaded by running the notebooks in ```./models``` or by importing from [here](https://drive.google.com/file/d/1dEe7mns24EDFOV5ny4iQqrhZSjIX_bgq/view?usp=sharing) (unzip the folder and replace ```./models/trained``` with it). 
+
+Tuning is performed in each model's notebook in ```./models```. We searched the hyperparameter space using an exhaustive grid search to minimize RMSE. The parameter grid for each model is listed below:
+
+1. **Baseline:** No hyperparameters, so no tuning performed.
+2. **Prophet:** ```{  
+    'changepoint_prior_scale': [0.001, 0.01, 0.1, 0.5],
+    'seasonality_prior_scale': [0.01, 0.1, 1.0, 10.0],
+    'yearly_seasonality': [True, False]
+}```
+3. **ARIMA:** Used pmdarima.auto_arima to select best parameters while minimizing AIC.
+4. **CNN:** ```{  
+    'num_lags': [1, 3, 5, 10]
+}```
+5. **LSTM:** ```{  
+    'num_lags': [1, 3, 5, 10]
+}```
+6. **STGCN:** ```{  
+    'k': [2, 4, 6, 8, 10, 12],
+    'epochs': [5, 10, 15, 20, 25, 30],
+    'opt': ['RMSProp', 'Adam'],
+    'ks': [1, 3, 5],
+    'num_lags': [4, 8, 12],
+    'lr': [1e-3, 1e-2, 1e-1, 1, 10]
+}``` 
+
 
 ## Evaluation
 Run ```evaluation.ipynb``` to measure and compare the models and view the plots in ```./plots``` to visualize forecast results.
