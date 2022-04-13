@@ -14,6 +14,8 @@ Babel==2.9.1
 backcall==0.2.0
 black==22.1.0
 bleach==4.1.0
+boto3==1.21.26
+botocore==1.24.26
 branca==0.4.2
 cachetools==5.0.0
 certifi==2021.10.8
@@ -35,6 +37,7 @@ defusedxml==0.7.1
 docutils==0.17.1
 entrypoints==0.4
 ephem==4.1.3
+et-xmlfile==1.1.0
 executing==0.8.2
 Fiona==1.8.21
 flatbuffers==2.0
@@ -63,6 +66,7 @@ ipython-genutils==0.2.0
 ipywidgets==7.6.5
 jedi==0.18.1
 Jinja2==3.0.3
+jmespath==1.0.0
 joblib==1.1.0
 jsonschema==4.4.0
 jupyter==1.0.0
@@ -95,6 +99,7 @@ notebook==6.4.8
 numpy==1.22.2
 numpydoc==1.1.0
 oauthlib==3.2.0
+openpyxl==3.0.9
 opt-einsum==3.3.0
 packaging==21.3
 pandas==1.2.3
@@ -140,6 +145,7 @@ requests==2.27.1
 requests-oauthlib==1.3.1
 retrying==1.3.3
 rsa==4.8
+s3transfer==0.5.2
 scikit-learn==1.0.2
 scipy==1.7.3
 seaborn==0.11.1
@@ -183,5 +189,6 @@ Werkzeug==2.0.3
 wheel==0.37.1
 widgetsnbextension==3.5.2
 wrapt==1.13.3
+xlrd==2.0.1
 yarl==1.7.2
 zipp==3.7.0

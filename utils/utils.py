@@ -6,6 +6,7 @@ from time import time
 import numpy as np
 from prophet import Prophet
 from tensorflow.keras import Sequential
+from subprocess import call
 
 # loads preprocessed data
 def load_processed_data(path_to_data, method='pickle'):
@@ -101,3 +102,9 @@ def get_test_metrics(true, preds, metrics=['mse', 'mae', 'rmse', 'r2']):
         else:
             raise Exception(f'Invalid metric: {metric}! Only metrics are mse, mae, rmse, and r2.') 
     return test_metrics
+
+def STGCN_grid_search(metric, num_folds, param_grid, script):
+    call(["python", script, '--metric', metric, '--folds', num_folds, 'grid_dict', str(param_grid)])
+
+def STGCN_cv(num_folds, script):
+    call(["python", script, '--folds', num_folds, 'cv', True])
