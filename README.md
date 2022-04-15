@@ -1,4 +1,6 @@
-# DS Capstone
+# DL Traffic Forecasting
+
+In this project, we explore several DL frameworks for traffic speed forecasting in LA's District 7.
 
 ## Data Loading
 1. Create a new environment and install the dependencies in requirements.txt.
